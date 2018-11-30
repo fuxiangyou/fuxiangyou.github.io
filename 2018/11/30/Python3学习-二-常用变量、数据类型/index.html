@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="数据类型[‘Number’,’String’,’List’,’Tupe’,’Set’,’Dictionary’] string、list、tuple都属于sequence(序列)  Number(数字类型)int(整形) 所有整数类型，不再区分长整型  float(浮点型) 所有小数类型 E记法：用于表示特别大和特别小的数 &amp;gt;&amp;gt;&amp;gt; a = 0.000000000000000000">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python3学习(二)--基础知识">
+<meta property="og:url" content="http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/index.html">
+<meta property="og:site_name" content="mac blog">
+<meta property="og:description" content="数据类型[‘Number’,’String’,’List’,’Tupe’,’Set’,’Dictionary’] string、list、tuple都属于sequence(序列)  Number(数字类型)int(整形) 所有整数类型，不再区分长整型  float(浮点型) 所有小数类型 E记法：用于表示特别大和特别小的数 &amp;gt;&amp;gt;&amp;gt; a = 0.000000000000000000">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-30T09:43:21.001Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python3学习(二)--基础知识">
+<meta name="twitter:description" content="数据类型[‘Number’,’String’,’List’,’Tupe’,’Set’,’Dictionary’] string、list、tuple都属于sequence(序列)  Number(数字类型)int(整形) 所有整数类型，不再区分长整型  float(浮点型) 所有小数类型 E记法：用于表示特别大和特别小的数 &amp;gt;&amp;gt;&amp;gt; a = 0.000000000000000000">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Python3学习(二)--基础知识</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/11/28/Python3学习-一-概述/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&text=Python3学习(二)--基础知识"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&title=Python3学习(二)--基础知识"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&is_video=false&description=Python3学习(二)--基础知识"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python3学习(二)--基础知识&body=Check out this article: http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&title=Python3学习(二)--基础知识"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&title=Python3学习(二)--基础知识"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&title=Python3学习(二)--基础知识"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&title=Python3学习(二)--基础知识"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&name=Python3学习(二)--基础知识&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据类型-‘Number’-’String’-’List’-’Tupe’-’Set’-’Dictionary’"><span class="toc-number">1.</span> <span class="toc-text">数据类型[‘Number’,’String’,’List’,’Tupe’,’Set’,’Dictionary’]</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Number-数字类型"><span class="toc-number">1.1.</span> <span class="toc-text">Number(数字类型)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#int-整形"><span class="toc-number">1.1.1.</span> <span class="toc-text">int(整形)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#float-浮点型"><span class="toc-number">1.1.2.</span> <span class="toc-text">float(浮点型)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bool-布尔类型"><span class="toc-number">1.1.3.</span> <span class="toc-text">bool(布尔类型)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#complex-复数"><span class="toc-number">1.1.4.</span> <span class="toc-text">complex(复数)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String-字符串"><span class="toc-number">1.2.</span> <span class="toc-text">String(字符串)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Set-集合"><span class="toc-number">1.3.</span> <span class="toc-text">Set(集合)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类型转换"><span class="toc-number">1.4.</span> <span class="toc-text">类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算术操作符"><span class="toc-number">1.5.</span> <span class="toc-text">算术操作符[+,-,**,/,%,**,//]</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Python3学习(二)--基础知识
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">mac blog</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-11-30T02:50:21.000Z" itemprop="datePublished">2018-11-30</time>
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="数据类型-‘Number’-’String’-’List’-’Tupe’-’Set’-’Dictionary’"><a href="#数据类型-‘Number’-’String’-’List’-’Tupe’-’Set’-’Dictionary’" class="headerlink" title="数据类型[‘Number’,’String’,’List’,’Tupe’,’Set’,’Dictionary’]"></a>数据类型[‘Number’,’String’,’List’,’Tupe’,’Set’,’Dictionary’]</h1><ul>
+<li>string、list、tuple都属于sequence(序列)</li>
+</ul>
+<h2 id="Number-数字类型"><a href="#Number-数字类型" class="headerlink" title="Number(数字类型)"></a>Number(数字类型)</h2><h3 id="int-整形"><a href="#int-整形" class="headerlink" title="int(整形)"></a>int(整形)</h3><ul>
+<li>所有整数类型，不再区分长整型</li>
+</ul>
+<h3 id="float-浮点型"><a href="#float-浮点型" class="headerlink" title="float(浮点型)"></a>float(浮点型)</h3><ul>
+<li>所有小数类型</li>
+<li><p>E记法：用于表示特别大和特别小的数</p>
+<pre><code>&gt;&gt;&gt; a = 0.00000000000000000000011  
+&gt;&gt;&gt; a
+1.1e-22 //类似于1.1 乘以 10的-22次方
+</code></pre></li>
+</ul>
+<h3 id="bool-布尔类型"><a href="#bool-布尔类型" class="headerlink" title="bool(布尔类型)"></a>bool(布尔类型)</h3><ul>
+<li>true 相当于1</li>
+<li>false 相当于0</li>
+<li>在python3中，布尔类型本质还是数字，可以做加减运算</li>
+</ul>
+<h3 id="complex-复数"><a href="#complex-复数" class="headerlink" title="complex(复数)"></a>complex(复数)</h3><ul>
+<li>复数由实数部分和虚数部分构成，可以用a+bj或者complex(a,b)表示，例如2E+6J,a和b都是float类型</li>
+</ul>
+<h2 id="String-字符串"><a href="#String-字符串" class="headerlink" title="String(字符串)"></a>String(字符串)</h2><font color="red"><br><br>  - 截取语法 变量[头下表:尾下标:取值方式]：索引从0开始，-1表示尾部最后一位（-:表示倒数;1:表示第一位），取值方式：符号+数字N，默认为1(-：表示倒序；数字N表示每N个字符中取第一个)<br><br>          &gt;&gt;&gt; str = “嘿！兄弟，下午好!”<br>        &gt;&gt;&gt; print(str[0:2])<br>        嘿！<br>        &gt;&gt;&gt; print(str[2:])<br>        兄弟，下午好!<br>        &gt;&gt;&gt; print(str[2::1])<br>        兄弟，下午好!<br>        &gt;&gt;&gt; print(str[::-1])<br>        !好午下，弟兄！嘿<br>        &gt;&gt;&gt; print(str[::-2])<br>        !午，兄嘿<br>        &gt;&gt;&gt; print(str[::2])<br>        嘿兄，午!<br>        &gt;&gt;&gt; print(str[2::-1])<br>        兄！嘿<br>  - +：字符串连接符<br>  - <em>：表示复制当前字符串，后面加数字表示复制次数<br><br><br>          &gt;&gt;&gt; str = “付先生 “ </em> 3<br>        &gt;&gt;&gt; str<br>        ‘付先生 付先生 付先生 ‘<br><br></font><br>#### 输出原始字符串（不用再进行转译）:r 字符串<br>    &gt;&gt;&gt; string = r’C:\mac’<br>    &gt;&gt;&gt; string<br>    ‘C:\mac’<br>    &gt;&gt;&gt; print(string)<br>    C:\mac<br>#### 长字符串：解决文章类的带格式的长字符串翻译问题<br>    &gt;&gt;&gt; string = “””哈喽：<br>    …             亲爱的朋友。”””<br>    &gt;&gt;&gt; string<br>    ‘哈喽：\n            亲爱的朋友。’<br>    &gt;&gt;&gt; print(string)<br>    哈喽：<br>            亲爱的朋友。<br>## List(数组)<br>  - 格式：[‘’,’’]&nbsp;&nbsp;(List写在方括号之间，元素用逗号隔开)<br>  - 元素可以重复 支持各种数据类型混用<br>  - 切片(截取)，索引方式和String一致<br><br>          &gt;&gt;&gt; list = [1,2,3,4,5,6]<br>        &gt;&gt;&gt; list2 = [7]<br>        &gt;&gt;&gt; print(list)<br>        [1, 2, 3, 4, 5, 6]<br>        &gt;&gt;&gt; print(list[1:3])<br>        [2, 3]<br>        &gt;&gt;&gt; print(list[3:])<br>        [4, 5, 6]<br>        &gt;&gt;&gt; print(list[::-1])<br>        [6, 5, 4, 3, 2, 1]<br>        &gt;&gt;&gt; print(list[::-1]*2)<br>        [6, 5, 4, 3, 2, 1, 6, 5, 4, 3, 2, 1]<br>        &gt;&gt;&gt; print(list[::-1]+list2)<br>        [6, 5, 4, 3, 2, 1, 7]<br><br><br>## Tuple(元组)<br>  - 切片(截取),索引方式和String一致<br>  - 元素不可修改，但可以包含可变元素<br>  - 格式：    (,)&nbsp;&nbsp;(List写在小括号之间，元素用逗号隔开)<br>  - <font color="red">赋值一个元素时也需要逗号: tup=(10,)</font>
+
+<pre><code>&gt;&gt;&gt; tuple = (&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;,&apos;f&apos;,&apos;g&apos;)
+&gt;&gt;&gt; tuple2 = (1,)
+&gt;&gt;&gt; print(tuple)
+(&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;, &apos;f&apos;, &apos;g&apos;)
+&gt;&gt;&gt; print(tuple[0])
+a
+&gt;&gt;&gt; print(tuple[1:2])
+(&apos;b&apos;,)
+&gt;&gt;&gt; print(tuple[1:3])
+(&apos;b&apos;, &apos;c&apos;)
+&gt;&gt;&gt; print(tuple[3:])
+(&apos;d&apos;, &apos;e&apos;, &apos;f&apos;, &apos;g&apos;)
+&gt;&gt;&gt; print(tuple[::-1])
+(&apos;g&apos;, &apos;f&apos;, &apos;e&apos;, &apos;d&apos;, &apos;c&apos;, &apos;b&apos;, &apos;a&apos;)
+&gt;&gt;&gt; print(tuple[::-1]*2)
+(&apos;g&apos;, &apos;f&apos;, &apos;e&apos;, &apos;d&apos;, &apos;c&apos;, &apos;b&apos;, &apos;a&apos;, &apos;g&apos;, &apos;f&apos;, &apos;e&apos;, &apos;d&apos;, &apos;c&apos;, &apos;b&apos;, &apos;a&apos;)
+&gt;&gt;&gt; print(tuple+tuple2)
+(&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;, &apos;f&apos;, &apos;g&apos;, 1)
+</code></pre><h2 id="Set-集合"><a href="#Set-集合" class="headerlink" title="Set(集合)"></a>Set(集合)</h2><ul>
+<li>格式: {,}&nbsp;&nbsp;(Set写在小括号之间，元素用逗号隔开)<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2></li>
+<li>int() 将字符串或者浮点数转换成一个整数  <font color="red">浮点数转整数时只保留整数，不会四舍五入</font></li>
+<li>float() 将字符串或者整数转换成浮点数</li>
+<li>str() 将其他数据类型转换成字符串</li>
+<li><font color="red">type() 查看变量类型</font></li>
+<li><font color="red">isinstance() 判断变量类型</font>
+
+</li>
+</ul>
+<p>#常用操作符</p>
+<h2 id="算术操作符"><a href="#算术操作符" class="headerlink" title="算术操作符[+,-,**,/,%,**,//]"></a>算术操作符<code>[+,-,**,/,%,**,//]</code></h2><font color="red"><br>### //与/:<br>  - // : 俗称地板除法 就是计算结果取比商小的最大整型<br><br>          &gt;&gt;&gt; 3//2<br>        1<br>  - / : 正常的算术除法<br><br>          &gt;&gt;&gt; 3/2<br>        1.5<br><br>### *与*<em><br>  - \</em> : 表示乘法运算  2<em>3=6<br>  - ** ： 表示指数运算 2</em>3(2^3) = 8<br><br><br></font><br>## 比较操作符<br><br># 判断语句：if else<br>### 语法<br>    if 条件：<br>        条件为true执行的操作<br>    elif 条件：<br>        条件为true执行的操作<br>    else:<br>        条件为true执行的操作<br><br><font color="red">未完待续。。。</font>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据类型-‘Number’-’String’-’List’-’Tupe’-’Set’-’Dictionary’"><span class="toc-number">1.</span> <span class="toc-text">数据类型[‘Number’,’String’,’List’,’Tupe’,’Set’,’Dictionary’]</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Number-数字类型"><span class="toc-number">1.1.</span> <span class="toc-text">Number(数字类型)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#int-整形"><span class="toc-number">1.1.1.</span> <span class="toc-text">int(整形)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#float-浮点型"><span class="toc-number">1.1.2.</span> <span class="toc-text">float(浮点型)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bool-布尔类型"><span class="toc-number">1.1.3.</span> <span class="toc-text">bool(布尔类型)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#complex-复数"><span class="toc-number">1.1.4.</span> <span class="toc-text">complex(复数)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String-字符串"><span class="toc-number">1.2.</span> <span class="toc-text">String(字符串)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Set-集合"><span class="toc-number">1.3.</span> <span class="toc-text">Set(集合)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类型转换"><span class="toc-number">1.4.</span> <span class="toc-text">类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算术操作符"><span class="toc-number">1.5.</span> <span class="toc-text">算术操作符[+,-,**,/,%,**,//]</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&text=Python3学习(二)--基础知识"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&title=Python3学习(二)--基础知识"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&is_video=false&description=Python3学习(二)--基础知识"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python3学习(二)--基础知识&body=Check out this article: http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&title=Python3学习(二)--基础知识"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&title=Python3学习(二)--基础知识"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&title=Python3学习(二)--基础知识"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&title=Python3学习(二)--基础知识"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://blog.fuxiangyou.com/2018/11/30/Python3学习-二-常用变量、数据类型/&name=Python3学习(二)--基础知识&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 mac
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
