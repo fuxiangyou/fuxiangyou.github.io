@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="##常用操作符 算术操作符(+,-,,/,%,,//) //与/:  // : 俗称地板除法 就是计算结果取比商小的最大整型   &amp;gt;&amp;gt;&amp;gt; 3//2 1  / : 正常的算术除法   &amp;gt;&amp;gt;&amp;gt; 3/2 1.5    *与**  * : 表示乘法运算  2*3=6 * ： 表示指数运算 23(2^3) = 8      判断操作符 判断语句：if else  语法 i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python3学习(三) -- 操作符">
+<meta property="og:url" content="http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/index.html">
+<meta property="og:site_name" content="mac blog">
+<meta property="og:description" content="##常用操作符 算术操作符(+,-,,/,%,,//) //与/:  // : 俗称地板除法 就是计算结果取比商小的最大整型   &amp;gt;&amp;gt;&amp;gt; 3//2 1  / : 正常的算术除法   &amp;gt;&amp;gt;&amp;gt; 3/2 1.5    *与**  * : 表示乘法运算  2*3=6 * ： 表示指数运算 23(2^3) = 8      判断操作符 判断语句：if else  语法 i">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-03T02:42:03.823Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python3学习(三) -- 操作符">
+<meta name="twitter:description" content="##常用操作符 算术操作符(+,-,,/,%,,//) //与/:  // : 俗称地板除法 就是计算结果取比商小的最大整型   &amp;gt;&amp;gt;&amp;gt; 3//2 1  / : 正常的算术除法   &amp;gt;&amp;gt;&amp;gt; 3/2 1.5    *与**  * : 表示乘法运算  2*3=6 * ： 表示指数运算 23(2^3) = 8      判断操作符 判断语句：if else  语法 i">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Python3学习(三) -- 操作符</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/11/30/Python3学习-二-数据类型/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&text=Python3学习(三) -- 操作符"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&title=Python3学习(三) -- 操作符"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&is_video=false&description=Python3学习(三) -- 操作符"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python3学习(三) -- 操作符&body=Check out this article: http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&title=Python3学习(三) -- 操作符"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&title=Python3学习(三) -- 操作符"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&title=Python3学习(三) -- 操作符"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&title=Python3学习(三) -- 操作符"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&name=Python3学习(三) -- 操作符&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#算术操作符"><span class="toc-number">1.</span> <span class="toc-text">算术操作符(+,-,,/,%,,//)</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#判断操作符"><span class="toc-number"></span> <span class="toc-text">判断操作符</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Python3学习(三) -- 操作符
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">mac blog</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-12-03T02:39:30.000Z" itemprop="datePublished">2018-12-03</time>
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>##常用操作符</p>
+<h3 id="算术操作符"><a href="#算术操作符" class="headerlink" title="算术操作符(+,-,,/,%,,//)"></a>算术操作符(+,-,<strong>,/,%,</strong>,//)</h3><ul>
+<li><p>//与/:</p>
+<ul>
+<li><p>// : 俗称地板除法 就是计算结果取比商小的最大整型</p>
+<pre><code>  &gt;&gt;&gt; 3//2
+1
+</code></pre></li>
+<li><p>/ : 正常的算术除法</p>
+<pre><code>  &gt;&gt;&gt; 3/2
+1.5
+</code></pre></li>
+</ul>
+</li>
+<li><p>*与**</p>
+<ul>
+<li>* : 表示乘法运算  2*3=6<ul>
+<li>*<em> ： 表示指数运算 2</em>3(2^3) = 8</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="判断操作符"><a href="#判断操作符" class="headerlink" title="判断操作符"></a>判断操作符</h2><ul>
+<li><p>判断语句：if else</p>
+<ul>
+<li><p>语法</p>
+<pre><code>if 条件1：
+    条件1为true执行的操作
+elif 条件2：
+    条件2为true执行的操作
+else:
+    其他条件为true执行的操作
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<font color="red">未完待续。。。</font>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#算术操作符"><span class="toc-number">1.</span> <span class="toc-text">算术操作符(+,-,,/,%,,//)</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#判断操作符"><span class="toc-number"></span> <span class="toc-text">判断操作符</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&text=Python3学习(三) -- 操作符"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&title=Python3学习(三) -- 操作符"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&is_video=false&description=Python3学习(三) -- 操作符"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python3学习(三) -- 操作符&body=Check out this article: http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&title=Python3学习(三) -- 操作符"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&title=Python3学习(三) -- 操作符"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&title=Python3学习(三) -- 操作符"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&title=Python3学习(三) -- 操作符"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://blog.fuxiangyou.com/2018/12/03/Python3学习-三-操作符/&name=Python3学习(三) -- 操作符&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 mac
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
