@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="mac blog">
 <meta property="og:description" content="数据类型[‘Number’,’String’,’List’,’Tupe’,’Set’,’Dictionary’] string、list、tuple都属于sequence(序列)  Number(数字类型)int(整形) 所有整数类型，不再区分长整型  float(浮点型) 所有小数类型 E记法：用于表示特别大和特别小的数 &amp;gt;&amp;gt;&amp;gt; a = 0.000000000000000000">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-03T02:41:11.975Z">
+<meta property="og:updated_time" content="2018-12-04T07:28:28.608Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python3学习(二) -- 数据类型">
 <meta name="twitter:description" content="数据类型[‘Number’,’String’,’List’,’Tupe’,’Set’,’Dictionary’] string、list、tuple都属于sequence(序列)  Number(数字类型)int(整形) 所有整数类型，不再区分长整型  float(浮点型) 所有小数类型 E记法：用于表示特别大和特别小的数 &amp;gt;&amp;gt;&amp;gt; a = 0.000000000000000000">
@@ -216,6 +216,29 @@ C:\mac
 &gt;&gt;&gt; print(list[::-1]+list2)
 [6, 5, 4, 3, 2, 1, 7]
 </code></pre></li>
+<li><p>创建</p>
+<ul>
+<li><code>newList = []</code></li>
+<li><code>newList = [1,&quot;mac&quot;,[1,2,3]]</code></li>
+</ul>
+</li>
+<li><p>添加</p>
+<ul>
+<li>.append(x): 添加单个变量，将x添加到数组最后</li>
+<li>.extend(list): 将list数组合并进去，将list中的元素拼到数组后面</li>
+<li>.insert(index,x): 在索引为0的地方插入x </li>
+</ul>
+</li>
+<li><p>删除</p>
+<ul>
+<li>.remove(x): 将数组中x这个元素删除,如果有多个x元素，删除索引最小的</li>
+<li>del a: 删除数组a</li>
+<li>del a[1]: 删除数组a中索引为1的元素</li>
+<li>.pop(x): 弹出索引为x的元素，不传参数默认弹出最后一个</li>
+</ul>
+</li>
+<li><p>数组的更多方法可以用dir(list)查看</p>
+</li>
 </ul>
 <h3 id="Tuple-元组"><a href="#Tuple-元组" class="headerlink" title="Tuple(元组)"></a>Tuple(元组)</h3><ul>
 <li>切片(截取),索引方式和String一致</li>
