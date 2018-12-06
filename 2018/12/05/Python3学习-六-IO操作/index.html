@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="文件open() 语法： open(file, mode=&amp;#39;r&amp;#39;, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)  参数说明:   - file: 必须，文件的相对/绝对路径 - mode: 可选, 文件打开模式 - buffering: 可选，设置缓冲 - en">
+    <meta name="description" content="文件open() 语法： open(file, mode=&amp;#39;r&amp;#39;, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)  参数说明:  file: 必须，文件的相对/绝对路径 buffering: 可选，设置缓冲 encoding: 可选，编码格式 errors: 可选">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python3学习(六) -- IO操作">
 <meta property="og:url" content="http://blog.fuxiangyou.com/2018/12/05/Python3学习-六-IO操作/index.html">
 <meta property="og:site_name" content="mac blog">
-<meta property="og:description" content="文件open() 语法： open(file, mode=&amp;#39;r&amp;#39;, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)  参数说明:   - file: 必须，文件的相对/绝对路径 - mode: 可选, 文件打开模式 - buffering: 可选，设置缓冲 - en">
+<meta property="og:description" content="文件open() 语法： open(file, mode=&amp;#39;r&amp;#39;, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)  参数说明:  file: 必须，文件的相对/绝对路径 buffering: 可选，设置缓冲 encoding: 可选，编码格式 errors: 可选">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-06T02:29:52.490Z">
+<meta property="og:updated_time" content="2018-12-06T02:32:38.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python3学习(六) -- IO操作">
-<meta name="twitter:description" content="文件open() 语法： open(file, mode=&amp;#39;r&amp;#39;, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)  参数说明:   - file: 必须，文件的相对/绝对路径 - mode: 可选, 文件打开模式 - buffering: 可选，设置缓冲 - en">
+<meta name="twitter:description" content="文件open() 语法： open(file, mode=&amp;#39;r&amp;#39;, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)  参数说明:  file: 必须，文件的相对/绝对路径 buffering: 可选，设置缓冲 encoding: 可选，编码格式 errors: 可选">
     
     
         
@@ -141,31 +141,20 @@
 <p><code>open(file, mode=&#39;r&#39;, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)</code></p>
 </li>
 <li><p>参数说明:</p>
+<ul>
+<li>file: 必须，文件的相对/绝对路径</li>
+<li>buffering: 可选，设置缓冲</li>
+<li>encoding: 可选，编码格式</li>
+<li>errors: 可选，报错级别</li>
+<li>newline: 区分换行符</li>
+<li>closefd: 传入的file参数类型</li>
+<li>opener: </li>
+<li>mode: 可选, 文件打开模式</li>
+</ul>
+<p>| 打开模式 | 执行操作 |<br>| :——:| :——: |<br>| ‘t’ | 以文本模式打开文件(默认) |<br>| ‘x’ | 写模式，使用此模式时，如果文件已经存在则会抛异常 |<br>| ‘b’ | 以二进制模式打开文件 |<br>| ‘+’ | 可读写模式(可与其他模式一块使用，例如: r+) |<br>| ‘U’ | 通用换行符支持 |<br>| ‘r’ | 以只读方式打开文件,指针在文件开头(默认) |<br>| ‘w’ | 以只写方式打开文件，指针从头开始，如果文件存在则会覆盖原先内容，覆盖操作 |<br>| ‘a’ | 以只写方式打开文件，如果文件存在则指针直接跳到文本末尾，追加操作 |</p>
 </li>
 </ul>
-<pre><code>- file: 必须，文件的相对/绝对路径
-- mode: 可选, 文件打开模式
-- buffering: 可选，设置缓冲
-- encoding: 可选，编码格式
-- errors: 可选，报错级别
-- newline: 区分换行符
-- closefd: 传入的file参数类型
-- opener: 
-
-
-mode参数:
-
-| 打开模式 | 执行操作 |
-| :------:| :------: |
-| &apos;t&apos; | 以文本模式打开文件(默认) |
-| &apos;x&apos; | 写模式，使用此模式时，如果文件已经存在则会抛异常 |
-| &apos;b&apos; | 以二进制模式打开文件 |
-| &apos;+&apos; | 可读写模式(可与其他模式一块使用，例如: r+) |
-| &apos;U&apos; | 通用换行符支持 |
-| &apos;r&apos; | 以只读方式打开文件,指针在文件开头(默认) |
-| &apos;w&apos; | 以只写方式打开文件，指针从头开始，如果文件存在则会覆盖原先内容，覆盖操作 |
-| &apos;a&apos; | 以只写方式打开文件，如果文件存在则指针直接跳到文本末尾，追加操作 |
-</code></pre><h3 id="文件对象-file"><a href="#文件对象-file" class="headerlink" title="文件对象 file"></a>文件对象 file</h3><p>####文件对象常用函数:</p>
+<h3 id="文件对象-file"><a href="#文件对象-file" class="headerlink" title="文件对象 file"></a>文件对象 file</h3><p>####文件对象常用函数:</p>
 <table>
 <thead>
 <tr>
