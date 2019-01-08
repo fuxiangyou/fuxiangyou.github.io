@@ -29,7 +29,7 @@ social_links:
   twitter: /
   facebook: /
   linkedin: /
-  mail: mailto:name@email.com
+  mail: mailto:525579332@qq.com
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
@@ -40,7 +40,7 @@ tags_overview: false
 #   - show_all_posts: whether to show all available posts.
 #   - post_count: whether to show only the x most recent posts.
 posts_overview:
-  show_all_posts: false
+  show_all_posts: true
   post_count: 5
 
 
@@ -132,4 +132,4 @@ baidu_analytics:
 # Fill in you Gravatar user id / email if you want to use your gravatar as the
 # logo and/or favicons of you website.
 gravatar:
-  email: name@email.com
+  email: 525579332@qq.com

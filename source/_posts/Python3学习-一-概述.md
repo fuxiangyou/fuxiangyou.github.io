@@ -1,5 +1,5 @@
 ---
-title: Python学习(一)--概述
+title: Python3学习(一)--概述
 date: 2018-11-28 11:15:24
 tags:
 ---
